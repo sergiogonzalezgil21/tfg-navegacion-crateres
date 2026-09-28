@@ -1,0 +1,60 @@
+# Escena, mallas y cache del terreno
+*.blend
+*.blend1
+*.stl
+*.obj
+*.npy
+
+# Texturas y mapas a resolucion completa
+blender/detalle.png
+blender/altura.png
+blender/albedo.png
+blender/mapa.png
+blender/crateres_catalogo.csv
+blender/tripletas_mapa.csv
+
+# Secuencias renderizadas, videos y etiquetas
+blender/Output/
+blender/Output_descenso/
+blender/previas/
+blender/labels/
+blender/labels_descenso/
+blender/impresion3d/
+*.mp4
+*.avi
+
+# Conjunto de entrenamiento, pesos y salidas de Ultralytics
+ia/dataset_blender/
+ia/verificacion/
+ia/runs/
+*.pt
+
+# Salidas de MATLAB: resultados, cache de tripletas y figuras
+matlab/fase*_resultados.csv
+matlab/fase4_cascada.csv
+matlab/pasadas/
+*.mat
+
+# Comprimidos
+*.zip
+*.7z
+*.rar
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# LaTeX
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.synctex.gz
+*.toc
