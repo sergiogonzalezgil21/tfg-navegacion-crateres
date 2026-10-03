@@ -2,13 +2,14 @@
 Paso 2. Prepara el conjunto de Blender en formato YOLO.
 
 El split no puede ser aleatorio. Los 700 frames son una sola trayectoria: la
-camara avanza 1.8 km entre frames y ve una huella de unos 150 km, asi que dos
+camara avanza 1.8 km entre frames y ve una huella de 150 a 196 km, asi que dos
 frames consecutivos comparten mas del 98 % del terreno. Repartirlos al azar
 dejaria el frame 300 en train y el 301 en val, y el mAP mediria memorizacion.
 
-Para que train y val no compartan nada, se separan por un hueco de al menos
-huella/paso frames: unos 83 frames que se descartan. El hueco se calcula a
-partir de trayectoria_real.csv, no a ojo.
+Para que train y val no compartan nada, se separan por un hueco de huella/paso
+frames, tomando la huella MAXIMA de la pasada para que la separacion valga
+tambien en el tramo mas alto: con este vuelo salen 109 frames, que se descartan.
+El hueco se calcula a partir de trayectoria_real.csv, no a ojo.
 
 Produce dataset_blender/{train,val}/{images,labels} y data.yaml.
 """
