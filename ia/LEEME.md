@@ -45,9 +45,11 @@ más del 98 % del terreno. Un split aleatorio pondría el frame 300 en train y e
 falso, midiendo memorización en vez de generalización.
 
 El script calcula el hueco necesario como huella/paso a partir de
-`trayectoria_real.csv`, no a ojo, y descarta esos frames. Con este vuelo salen
-unos 83, y merece la pena: es la diferencia entre una métrica real y una
-inventada.
+`trayectoria_real.csv`, no a ojo, y descarta esos frames. Usa la huella máxima
+de la pasada, 196 km, para que la separación valga también en el tramo más alto:
+con este vuelo salen 109 frames, y quedan 434 de entrenamiento y 157 de
+validación, separados por 200 km de terreno. Merece la pena: es la diferencia
+entre una métrica real y una inventada.
 
 ## 03 — Entrenar
 
